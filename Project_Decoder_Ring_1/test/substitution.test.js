@@ -2,7 +2,6 @@
 // Write your tests here!
 const { expect } = require("chai");
 const substitution = require("../src/substitution")
-const isStringUnique = require("../src/substitution")
 
 describe("substitution()", () => {
     //substitution("thinkful", "short"); //> false
@@ -46,16 +45,12 @@ describe("substitution()", () => {
         const expected = "message"
         expect(actual).to.be.equal(expected)
     })
-})
 
-//tesitng the isStringUnique function
-describe("isStringUnique()", () => {
+    //tesitng the isStringUnique function
     it("should return false if the string is not valid", () => {
-        const actual = isStringUnique("abcabcabcabcabcabcabcabcyz")
+        const actual = substitution("thinkful", "abcabcabcabcabcabcabcabcyz")
         const expected = false
         expect(actual).to.be.equal(expected)
     })
 })
-
-
 //xoyqmcgrukswaflnthdjpzibev

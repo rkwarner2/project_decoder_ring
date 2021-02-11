@@ -34,9 +34,13 @@ const substitutionModule = (function () {
     else
     {
       //test the length of the alphabet for 26 and make sure all characters are unique
-      if (!(alphabet.length === 26) || !(isStringUnique(alphabet)))
+      if (alphabet.length !== 26)
       {
         return false; /* NYC NOT COVERED */
+      }
+      else if (!isStringUnique(alphabet))
+      {
+        return false;
       }
       else
       {
@@ -55,7 +59,6 @@ const substitutionModule = (function () {
               //get the index of the letter in the default alphabet
               pos = alphabetDefault.indexOf(c);
 
-              
               output += alphabet[pos];
             } 
             else //for decoding 
@@ -80,4 +83,4 @@ const substitutionModule = (function () {
   return { substitution, isStringUnique };
 })();
 
-module.exports = substitutionModule.substitution, substitutionModule.isStringUnique
+module.exports = substitutionModule.substitution
