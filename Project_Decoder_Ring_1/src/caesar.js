@@ -28,7 +28,7 @@ const caesarModule = (function () {
       //if we are encoding, then the shift value needs to be the opposite before creating the shifted alphabet
       if (encode === false)
       {
-        shift = -Math.abs(shift)
+        shift = shift * -1
       }
 
       //create the shifted alphabet
