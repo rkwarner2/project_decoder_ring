@@ -1,15 +1,18 @@
-function isStringUnique(str) {
+function isStringUnique(str)
+{
   for (let i = 0; i < str.length - 1; i++) {
     for (let j = i + 1; j < str.length; j++) {
-      if (str[i] === str[j]) {
-        return false;
+      console.log(str[i], str[j])
+      if (str[i] == str[j]) {
+        //console.log("why am i here")
+        return false; /* NYC NOT COVERED */
       }
     }
   }
   return true;
 }
 
-function substitution(input, alphabet, encode = true)
+/* unction substitution(input, alphabet, encode = true)
 {
   // your solution code here
 
@@ -59,7 +62,7 @@ function substitution(input, alphabet, encode = true)
       return output;
     }
   }
-}
+} */
 
 
 let uniResult = isStringUnique("abcdefghijklmnopqrstuvwxyz")
